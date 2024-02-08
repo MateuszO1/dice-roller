@@ -1,84 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>About Me</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            line-height: 1.6;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .main-info {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-        }
-        .main-info h1 {
-            margin: 0;
-        }
-        .hobby, .introduction, .course, .funfact {
-            background: #e7e7e7;
-            padding: 15px;
-            margin-bottom: 10px;
-        }
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <header class="main-info">
-            <h1>Mateusz Obrochta</h1>
-            <h1>Preferred Name: Matt</h1>
-            <p>Lewis Email: <a href="mailto:mateuszobrochta@lewisu.edu">Link</a></p>
-            <p>Discord Name: _pl3b</p>
-        </header>
-
-        <section class="picture">
-            <img src="images/me.png" alt="Matt" style="width:350px;height:400px;">
-        </section>
-
-        <section class="introduction">
-			<h2>Introduction</h2>
-            <p>My name is Mateusz Obrochta or just Matt works. My parents immigrated here from Poland before I was born, 
-                hence the unusual first name. I was born on September 15, 2000 which makes me 23 as of writing this.
-                This will be my 3rd year here at Lewis and I am majoring in Computer Science. I chose this major
-                because I gained an interest in computers from playing video games and wanted to try and make my own.
-            </p>
-        </section>
-		<section class="course">
-            <h2>What I hope to Learn in this Course</h2>
-            <ul style="list-style-type: square;">
-                <li>How to work in a group on a project</li>
-                <li>Proper structure of a group</li>
-                <li>Key Roles in a group</li>
-                <li>How to put all individual&ldquo;/other&rdquo; group work together</li>
-            </ul>
-        </section>
-
-		<section class="hobby">
-            <h2>My Favorite Hobby/Activity</h2>
-            <ul style="list-style-type: square;">
-                <li>Gaming</li>
-                <li>PC Building</li>
-                    <ul style="list-style-type: square;">
-                        <li>Link for details: <a href="hobby.htm">Link</a></li>
-                    </ul>
-            </ul>
-        </section>	
-
-        <section class="funfact">
-            <h2>Fun Fact</h2>
-            <p>One fun fact about me is that I am a first generation college student as well as the first in my family to speak fluent English.</p>
-        </section>
-    </div>
+<body onload="rollDice()">
+    <h1>Dice Roller</h1>
+    <p>Instructions: Click the "Roll" button to roll the dice six different times.</p>
+    <table>
+        <tr>
+            <th>Dice 1</th>
+            <th>Dice 2</th>
+            <th>Dice 3</th>
+            <th>Dice 4</th>
+            <th>Dice 5</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="dice1" readonly></td>
+            <td><input type="text" id="dice2" readonly></td>
+            <td><input type="text" id="dice3" readonly></td>
+            <td><input type="text" id="dice4" readonly></td>
+            <td><input type="text" id="dice5" readonly></td>
+        </tr>
+    </table>
+    <button id="roll" onclick="rollDice()" autofocus>Roll</button>
+    <script src="script.js"></script>
 </body>
 </html>
