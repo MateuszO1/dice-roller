@@ -1,5 +1,5 @@
 # Mateusz Obrochta (2024)
-Created this website for Software Engineering. The site is a simple dice roller that rolls six instances of dice for a game. It rolls all the dice on load of the page and the roll button has autofocus so enter can be used to re-roll the dice.
+Created this website for Software Engineering. The page is a simple dice roller that rolls five instances of dice for a game. It rolls all the dice on load of the page and the roll button has autofocus so enter can be used to re-roll the dice.
 
 # Contact
 Email: mateuszobrochta@lewisu.edu
