@@ -6,4 +6,5 @@ Email: mateuszobrochta@lewisu.edu
 
 # Credits
 - Eric Pogue, For basic index.html to start this project
-- W3Schools, For validation and HTML/CSS/JavaScript coding resources
+- W3Schools, For HTML/CSS/JavaScript coding resources
+- W3C Markup Validation Service, For validation of code
