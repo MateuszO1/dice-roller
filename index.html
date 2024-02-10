@@ -8,6 +8,7 @@
 <body onload="rollDice()">
     <h1>Dice Roller</h1>
     <p>Instructions: Click the "Roll" button to roll the dice six different times.</p>
+    <!--Table that contains a label for each of the five dice-->
     <table>
         <tr>
             <th>Dice 1</th>
@@ -16,6 +17,7 @@
             <th>Dice 4</th>
             <th>Dice 5</th>
         </tr>
+        <!--Table that contains the roll value of each of the five dice-->
         <tr>
             <td><input type="text" id="dice1" readonly></td>
             <td><input type="text" id="dice2" readonly></td>
@@ -24,6 +26,7 @@
             <td><input type="text" id="dice5" readonly></td>
         </tr>
     </table>
+    <!--The button used to roll all five dice-->
     <button id="roll" onclick="rollDice()" autofocus>Roll</button>
     <script src="script.js"></script>
 </body>
