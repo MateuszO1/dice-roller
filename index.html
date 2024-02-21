@@ -5,7 +5,7 @@
     <title>Dice Roller</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body onload="rollDice()">
+<body>
     <h1>Dice Roller</h1>
     <p>Instructions: Click the "Roll" button to roll the dice six different times.</p>
     <!--Table that contains a label for each of the five dice-->
@@ -31,7 +31,7 @@
     <script>
 
 			async function fetch2Plus2() {
-				const url = document.getElementById("dice-roller-api.azurewebsites.net").value + "/2plus2";
+				const url = document.getElementById("https://dice-roller-api.azurewebsites.net/").value + "/2plus2";
 				const response = await fetch(url)
 				const responseText = await response.text()
                 document.getElementById("fetch-2plus2-result").innerHTML = responseText
