@@ -34,6 +34,7 @@
 				const url = document.getElementById("dice-roller-api.azurewebsites.net").value + "/2plus2";
 				const response = await fetch(url)
 				const responseText = await response.text()
+                document.getElementById("fetch-2plus2-result").innerHTML = responseText
 			}
 
     </script>
