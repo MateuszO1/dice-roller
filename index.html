@@ -28,13 +28,19 @@
     </table>
     <!--The button used to roll all five dice-->
     <button id="roll" onclick="fetch2Plus2()" autofocus>Roll</button>
-    <div id="fetch-2plus2-result"></div>
+    <div id="fetch-dice-roll-result"></div>
     <br><br>
     <script>
 			async function fetch2Plus2() {
 				const response = await fetch("https://dice-roller-api.azurewebsites.net/2plus2")
 				const responseText = await response.text()
 				document.getElementById("fetch-2plus2-result").innerHTML = responseText
+			}
+
+	    		async function fetchRollDice() {
+				const response = await fetch("https://dice-roller-api.azurewebsites.net/rollDice")
+				const responseText = await response.text()
+				document.getElementById("fetch-dice-roll-result").innerHTML = responseText
 			}
     </script>
 </body>
