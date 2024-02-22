@@ -30,15 +30,13 @@
     <button id="roll" onclick="fetchRollDice()" autofocus>Roll</button>
     <br><br>
     <script>
-	    		async function fetchRollDice() {
-				const response = await fetch("https://dice-roller-api.azurewebsites.net/rollDice")
-				const responseText = await response.text()
-				document.getElementById("fetch-dice-roll-result-1").value = responseText
-				document.getElementById("fetch-dice-roll-result-2").value = responseText
-				document.getElementById("fetch-dice-roll-result-3").value = responseText
-				document.getElementById("fetch-dice-roll-result-4").value = responseText
-				document.getElementById("fetch-dice-roll-result-5").value = responseText
-			}
+	async function fetchRollDice() {
+		for (let i = 1; i <= 5; i++) {
+	        	const response = await fetch("https://dice-roller-api.azurewebsites.net/rollDice");
+	                const responseText = await response.text();
+	        	document.getElementById("fetch-dice-roll-result-" + i).value = responseText;
+	    	}
+        }
     </script>
 </body>
 </html>
