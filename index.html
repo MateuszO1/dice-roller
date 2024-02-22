@@ -36,8 +36,7 @@
 
     <script>
 			async function fetch2Plus2() {
-				const url = document.getElementById("https://dice-roller-api.azurewebsites.net").value + "/2plus2";
-				const response = await fetch(url)
+				const response = await fetch("https://dice-roller-api.azurewebsites.net/2plus2")
 				const responseText = await response.text()
 				document.getElementById("fetch-2plus2-result").innerHTML = responseText
 			}
