@@ -19,24 +19,22 @@
         </tr>
         <!--Table that contains the roll value of each of the five dice-->
         <tr>
-            <td><input type="text" id="fetch-2plus2-result" readonly></td>
-            <td><input type="text" id="fetch-2plus2-result" readonly></td>
-            <td><input type="text" id="fetch-2plus2-result" readonly></td>
-            <td><input type="text" id="fetch-2plus2-result" readonly></td>
-            <td><input type="text" id="fetch-2plus2-result" readonly></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
     <!--The button used to roll all five dice-->
     <button id="roll" onclick="fetch2Plus2()" autofocus>Roll</button>
+    <div id="fetch-2plus2-result"></div>
     <br><br>
     <script>
-			let fetch2plus2Counter = 0
 			async function fetch2Plus2() {
-				fetch2plus2Counter++
-				const url = document.getElementById("urlInput").value + "/2plus2";
-				const response = await fetch(url)
+				const response = await fetch("https://dice-roller-api.azurewebsites.net/2plus2")
 				const responseText = await response.text()
-				document.getElementById("fetch-2plus2-result").innerHTML = responseText + " ("+fetch2plus2Counter+")"
+				document.getElementById("fetch-2plus2-result").innerHTML = responseText
 			}
     </script>
 </body>
