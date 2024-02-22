@@ -5,7 +5,7 @@
     <title>Dice Roller</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body onload = "fetch2Plus2()">
+<body onload = "fetchRollDice()">
     <h1>Dice Roller</h1>
     <p>Instructions: Click the "Roll" button to roll the dice six different times.</p>
     <!--Table that contains a label for each of the five dice-->
@@ -19,28 +19,25 @@
         </tr>
         <!--Table that contains the roll value of each of the five dice-->
         <tr>
-            <td><input style="text" id="fetch-2plus2-result" readonly></td>
-            <td><input style="text" id="fetch-2plus2-result" readonly></td>
-	    <td><input style="text" id="fetch-2plus2-result" readonly></td>
-	    <td><input style="text" id="fetch-2plus2-result" readonly></td>
-	    <td><input style="text" id="fetch-2plus2-result" readonly></td>
+            <td><input style="text" id="fetch-dice-roll-result-1" readonly></td>
+            <td><input style="text" id="fetch-dice-roll-result-2" readonly></td>
+	    <td><input style="text" id="fetch-dice-roll-result-3" readonly></td>
+	    <td><input style="text" id="fetch-dice-roll-result-4" readonly></td>
+	    <td><input style="text" id="fetch-dice-roll-result-5" readonly></td>
         </tr>
     </table>
     <!--The button used to roll all five dice-->
     <button id="roll" onclick="fetchRollDice()" autofocus>Roll</button>
-    <div id="fetch-dice-roll-result"></div>
     <br><br>
     <script>
-			async function fetch2Plus2() {
-				const response = await fetch("https://dice-roller-api.azurewebsites.net/2plus2")
-				const responseText = await response.text()
-				document.getElementById("fetch-2plus2-result").innerHTML = responseText
-			}
-
 	    		async function fetchRollDice() {
 				const response = await fetch("https://dice-roller-api.azurewebsites.net/rollDice")
 				const responseText = await response.text()
-				document.getElementById("fetch-dice-roll-result").innerHTML = responseText
+				document.getElementById("fetch-dice-roll-result-1").value = responseText
+				document.getElementById("fetch-dice-roll-result-2").value = responseText
+				document.getElementById("fetch-dice-roll-result-3").value = responseText
+				document.getElementById("fetch-dice-roll-result-4").value = responseText
+				document.getElementById("fetch-dice-roll-result-5").value = responseText
 			}
     </script>
 </body>
