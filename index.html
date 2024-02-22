@@ -4,47 +4,8 @@
     <meta charset="UTF-8">
     <title>Dice Roller</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-		#urlInput {
-            width: 500px; 
-            padding: 10px;
-            font-size: 14px;
-        }
-        #favoritePlacesJSON, #batmanJSON {
-            padding: 20px;
-            background-color: lightgray;
-            margin-top: 20px;
-        }
-		#testingDiv {
-            display: none;
-        }
-    </style>
 </head>
 <body>
-    <label for="urlInput">MERNa Server URL:</label><br />
-	<input type="text" id="urlInput" placeholder="Enter the URL of your remote MERNa server here..."><br /><br />
-
-	<button onclick="testMERNaServerConnection()">Test MERNa Server Connection</button>
-	<div id="ping"></div><br /><br />
-
-	<script>
-		async function testMERNaServerConnection() {
-			const pingField = document.getElementById("ping");
-			pingField.innerHTML = "";
-			var div = document.getElementById('testingDiv');
-
-			const url = document.getElementById("urlInput").value + "/api/ping";
-			const response = await fetch(url);
-			const pingResponse = await response.text();
-
-			if (pingResponse === 'ping response') {
-				pingField.innerHTML = "Success!";
-				var div = document.getElementById('testingDiv');
-			} 
-		}
-	</script>
-
-
     <h1>Dice Roller</h1>
     <p>Instructions: Click the "Roll" button to roll the dice six different times.</p>
     <!--Table that contains a label for each of the five dice-->
@@ -68,11 +29,6 @@
     <!--The button used to roll all five dice-->
     <button id="roll" onclick="fetch2Plus2()" autofocus>Roll</button>
     <br><br>
-
-    <button type="button" onclick="fetch2Plus2()">Fetch 2plus2</button>
-		<div id="fetch-2plus2-result"></div>
-		<br><br>
-
     <script>
 			let fetch2plus2Counter = 0
 			async function fetch2Plus2() {
