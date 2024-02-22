@@ -32,7 +32,6 @@
 			const pingField = document.getElementById("ping");
 			pingField.innerHTML = "";
 			var div = document.getElementById('testingDiv');
-			div.style.display = 'none';
 
 			const url = document.getElementById("urlInput").value + "/api/ping";
 			const response = await fetch(url);
